@@ -11,5 +11,6 @@ variable "kubernetes_version" {
 }
 
 variable "orchestrator_version" {
-    description = "Set the desired version of kubernetes agents"
+    description = "Set the desired version of kubernetes agents. If not defined kubernetes_version is used"
+    default = ""    
 }

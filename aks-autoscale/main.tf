@@ -17,7 +17,7 @@ resource "azurerm_kubernetes_cluster" "example" {
     min_count           = 1
     max_count           = 2
     vm_size             = "Standard_DS2_v2"
-    orchestrator_version = var.orchestrator_version
+    orchestrator_version = var.orchestrator_version != "" ? var.orchestrator_version : var.kubernetes_version
   }
 
   identity {
